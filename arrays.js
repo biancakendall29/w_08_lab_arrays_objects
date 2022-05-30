@@ -68,21 +68,29 @@ console.log(stations);
  * We forgot about Darlington! Add it to the route between Newcastle and York.
  */
 
-// console.log(stations);
+index3 = stations.indexOf("York");
+stations.splice(index3, 0, "Darlington"); // inserts at position before given index
 
-
+console.log(stations);
 
 /**
  * Q8.
  * Is Durham one of the stops?
  */
 
-stoppingAtDurham = null;
+stoppingAtDurham = stations.find(element => element == "Durham");
 
-// console.log(stoppingAtDurham);
+console.log(stoppingAtDurham);
 
 
 /**
  * Q9.
  * If we are stopping at Durham, print "Yay Durham!" to the terminal. If not print "Aww...".
  */
+
+if (stoppingAtDurham === "Durham") {
+    console.log("Yay Durham!");
+}
+else {
+    console.log("Aww...");
+}
